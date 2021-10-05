@@ -9,8 +9,8 @@ import { TemaService } from '../service/tema.service';
   templateUrl: './tema.component.html',
   styleUrls: ['./tema.component.css']
 })
-export class TemaComponent implements OnInit {
 
+export class TemaComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   constructor(

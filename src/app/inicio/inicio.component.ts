@@ -29,6 +29,10 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
 
+  //orderBy
+  key: string = 'data'
+  reverse: boolean = true
+
 
   constructor(
     private router: Router,

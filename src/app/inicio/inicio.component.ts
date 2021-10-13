@@ -22,12 +22,14 @@ export class InicioComponent implements OnInit {
   //postagens
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  tituloPost: string
   
   
   //tema
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
+  descricaoTema: string
 
   //orderBy
   key: string = 'data'
@@ -92,6 +94,28 @@ export class InicioComponent implements OnInit {
     })
     this.postagem = new Postagem()
     this.getAllPostagens()
+  }
+
+
+  findByTituloPostagem(){
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    }else{
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=>{
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByDescricaoTema(){
+    if(this.descricaoTema == ''){
+      this.getAllTemas()
+    }else{
+      this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
+      })
+    }
+
   }
 
 }

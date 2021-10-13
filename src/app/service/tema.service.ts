@@ -26,6 +26,10 @@ export class TemaService {
   getAllTema(): Observable<Tema[]> {
     return this.http.get<Tema[]>('https://receitasdomarquito.herokuapp.com/tema', this.token)
   }
+  //ajeitar para mostrar o tema na postagem por tema
+  getByDescricaoTema(descricao:string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://receitasdomarquito.herokuapp.com/tema/descricao/${descricao}`, this.token)
+  }
   
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://receitasdomarquito.herokuapp.com/tema', tema, this.token)

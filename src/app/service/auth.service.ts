@@ -32,8 +32,8 @@ export class AuthService {
     return this.http.post<User>('https://receitasdomarquito.herokuapp.com/usuarios/cadastrar', user)
   }
 
-  atualizar(user: User): Observable<User> {
-    return this.http.put<User>('https://receitasdomarquito.herokuapp.com/usuarios/atualizar', user)
+  atualizarUsuario(user: User): Observable<User> {
+    return this.http.put<User>('https://receitasdomarquito.herokuapp.com/usuarios/atualizar', user, this.token)
   }
 
 

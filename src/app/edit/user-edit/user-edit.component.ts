@@ -46,7 +46,7 @@ export class UserEditComponent implements OnInit {
     if(this.user.senha != this.confirmarSenha){
       alert("As senhas estao incorretas")
     }else{
-      this.authService.atualizar(this.user).subscribe((resp:User) =>{
+      this.authService.atualizarUsuario(this.user).subscribe((resp:User) =>{
         this.user = resp
         this.router.navigate(['/inicio'])
         alert('Usuario atualizado com sucesso, faca o login novamente')

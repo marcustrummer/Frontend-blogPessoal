@@ -1,3 +1,82 @@
+@import url("https://fonts.cdnfonts.com/css/bubbleboddy-neue-trial");
+
+a {
+  font-size: 21px;
+  font-family: "Bubbleboddy Neue Trial", sans-serif;
+  font-weight: 200;
+  color: red;
+  cursor: pointer; 
+}
+
+.margintananan{
+  margin-left: 180px;
+}
+
+
+
+
+
+p {
+  font-size: 12px;
+  font-family: "Bubbleboddy Neue Trial", sans-serif;
+  font-weight: 300;
+}
+
+
+.fa:hover{
+  color:#030349;
+}
+.material-icons:hover{
+  color:#030349;
+
+}
+
+.fontBlue {
+  color: #030349;
+}
+
+input::placeholder {
+  color: #8e8e94;
+  font-family: "Bubbleboddy Neue Trial", sans-serif;
+  font-weight: 200;
+}
+.pesquisa{
+  width: 250px;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.pesquisa:focus{
+  width: 200px;
+}
+
+input{
+  font-weight: 200;
+}
+
+.linha {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #8e8e94;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: "Bubbleboddy Neue Trial", sans-serif;
+  font-size: 16px;
+  color: #030349;
+  width: 155px;
+}
+
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border-bottom: 1px solid #8e8e94;
+  outline: 0;
+}
 .fs16{
     font-size: 16pt;
 }

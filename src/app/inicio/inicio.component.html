@@ -73,6 +73,7 @@
         role="tab"
         aria-controls="nav-postagemTema"
         aria-selected="false"
+        (click)="getAllPostagens()"
         >Postagens por tema</a
       >
     </div>
@@ -265,6 +266,7 @@
           type="button"
           class="btn btn-success"
           (click)="publicar()"
+          (click)="getAllPostagens()"
           data-dismiss="modal"
         >
           Publicar

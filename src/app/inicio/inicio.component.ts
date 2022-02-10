@@ -108,15 +108,9 @@ export class InicioComponent implements OnInit {
   }
 
   findByDescricaoTema(){
-    if(this.descricaoTema == ''){
-      this.getAllTemas()
-      
-    }else{
       this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp: Tema[])=>{
         this.listaTemas = resp
       })
-    }
-
   }
 
 }

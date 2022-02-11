@@ -39,9 +39,7 @@ export class EntrarComponent implements OnInit {
       if(erro.status == 401){
         this.alertas.showAlertDanger('Usuario ou senha estao incorretos!')
       }
-      else{
-        this.alertas.showAlertSuccess('Usuario logado com sucesso! O primeiro acesso pode demorar um pouquinho...')
-      }
     })
+    this.alertas.showAlertSuccess('Usuario logado com sucesso! O primeiro acesso pode demorar um pouquinho...')
   }
 }

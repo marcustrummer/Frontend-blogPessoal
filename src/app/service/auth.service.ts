@@ -25,21 +25,21 @@ export class AuthService {
   }
 
   entrar(userLogin: UserLogin):Observable<UserLogin> {
-    return this.http.post<UserLogin>('https://receitasdomarquito.herokuapp.com/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>('https://personalblog-210efde6f59c.herokuapp.com/usuarios/logar', userLogin)
   }
 
   cadastrar(user: User): Observable<User> {
-    return this.http.post<User>('https://receitasdomarquito.herokuapp.com/usuarios/cadastrar', user)
+    return this.http.post<User>('https://personalblog-210efde6f59c.herokuapp.com/usuarios/cadastrar', user)
   }
 
   atualizarUsuario(user: User): Observable<User> {
-    return this.http.put<User>('https://receitasdomarquito.herokuapp.com/usuarios/atualizar', user, this.token)
+    return this.http.put<User>('https://personalblog-210efde6f59c.herokuapp.com/usuarios/atualizar', user, this.token)
   }
 
 
 
   getByIdUser(id: number): Observable<User> {
-    return this.http.get<User>(`https://receitasdomarquito.herokuapp.com/usuarios/${id}`, this.token)
+    return this.http.get<User>(`https://personalblog-210efde6f59c.herokuapp.com/usuarios/${id}`, this.token)
   }
   
   logado(){

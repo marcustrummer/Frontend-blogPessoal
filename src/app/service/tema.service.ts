@@ -20,28 +20,28 @@ export class TemaService {
   }
 
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://receitasdomarquito.herokuapp.com/tema/${id}`, this.token)
+    return this.http.get<Tema>(`https://personalblog-210efde6f59c.herokuapp.com/tema/${id}`, this.token)
   }
 
   getAllTema(): Observable<Tema[]> {
-    return this.http.get<Tema[]>('https://receitasdomarquito.herokuapp.com/tema', this.token)
+    return this.http.get<Tema[]>('https://personalblog-210efde6f59c.herokuapp.com/tema', this.token)
   }
   //ajeitar para mostrar o tema na postagem por tema
   getByDescricaoTema(descricao:string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://receitasdomarquito.herokuapp.com/tema/descricao/${descricao}`, this.token)
+    return this.http.get<Tema[]>(`https://personalblog-210efde6f59c.herokuapp.com/tema/descricao/${descricao}`, this.token)
   }
   
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://receitasdomarquito.herokuapp.com/tema', tema, this.token)
+    return this.http.post<Tema>('https://personalblog-210efde6f59c.herokuapp.com/tema', tema, this.token)
 
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://receitasdomarquito.herokuapp.com/tema', tema, this.token)
+    return this.http.put<Tema>('https://personalblog-210efde6f59c.herokuapp.com/tema', tema, this.token)
   }
 
   deleteTema(id: number){
-    return this.http.delete(`https://receitasdomarquito.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`https://personalblog-210efde6f59c.herokuapp.com/tema/${id}`, this.token)
   }
   
   
